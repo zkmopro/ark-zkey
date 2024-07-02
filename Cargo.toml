@@ -1,12 +1,13 @@
 [package]
 name = "ark-zkey"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Library to read zkey faster by serializing to arkworks friendly format."
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/zkmopro/mopro"
+repository = "https://github.com/zkmopro/ark-zkey"
 documentation = "https://zkmopro.org/"
 homepage = "https://zkmopro.org/"
+exclude = ["target/*", "test-vectors/*"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

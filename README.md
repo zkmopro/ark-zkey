@@ -1,5 +1,7 @@
 # ark-zkey
 
+![Crates.io](https://img.shields.io/crates/v/ark-zkey?label=ark-zkey)
+
 Library to read `zkey` faster by serializing to `arkworks` friendly format.
 
 See https://github.com/zkmopro/mopro/issues/25 for context.
