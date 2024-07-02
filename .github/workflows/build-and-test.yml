@@ -1,0 +1,35 @@
+name: Build and Test
+
+on:
+    push:
+    pull_request:
+        types:
+            - opened
+            - reopened
+            - synchronize
+            - ready_for_review
+
+env:
+    CARGO_TERM_COLOR: always
+
+jobs:
+    # TODO: Add a job to run clippy
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Check formatting
+              run: cargo fmt --all -- --check
+
+    test-ark-zkey:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Install Rust toolchain
+              uses: actions-rs/toolchain@v1
+            - name: Install ark-zkey
+              run: cargo install --bin arkzkey-util --path .
+            - name: Test ark-zkey binary
+              run: cargo test multiplier2 --release -- --nocapture
+            - name: Run ark-zkey tests
+              run: cargo test --release --package ark-zkey --lib -- tests --show-output
