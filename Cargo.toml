@@ -1,6 +1,6 @@
 [package]
 name = "ark-zkey"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Library to read zkey faster by serializing to arkworks friendly format."
 license = "MIT OR Apache-2.0"
