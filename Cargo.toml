@@ -1,6 +1,6 @@
 [package]
 name = "ark-zkey"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Library to read zkey faster by serializing to arkworks friendly format."
 license = "MIT OR Apache-2.0"
@@ -21,10 +21,10 @@ memmap2 = "0.9"
 flame = "0.2"
 flamer = "0.5"
 
-ark-serialize = { version = "=0.4.1", features = ["derive"] }
-ark-bn254 = { version = "=0.4.0" }
-ark-groth16 = { version = "=0.4.0" }
-ark-circom = { git = "https://github.com/vimwitch/circom-compat.git", version = "0.1.0" }
-ark-relations = { version = "=0.4.0" }
-ark-ff = { version = "=0.4.1" }
-ark-ec = { version = "=0.4.1" }
+ark-serialize = { version = "0.5.0", features = ["derive"] }
+ark-bn254 = { version = "0.5.0" }
+ark-groth16 = { version = "0.5.0", features = ["parallel"] }
+ark-circom = { version = "0.5.0"}
+ark-relations = { version = "0.5.0" }
+ark-ff = { version = "0.5.0" }
+ark-ec = { version = "0.5.0", features = ["parallel"] }
